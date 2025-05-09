@@ -1,0 +1,213 @@
+Descripción del Problema
+El Departamento Técnico Pedagógico (DTP) del Instituto Profesional
+INACAP brinda apoyo a los estudiantes que reportan alguna
+discapacidad o neurodiversidad.
+Al inicio de cada semestre, el DTP recibe una planilla denominada
+"FUD" con los datos de los alumnos que han informado alguna
+condición especial. Luego, se agenda una entrevista presencial con
+cada estudiante para evaluar su situación. Con base en este
+encuentro, el equipo determina si el alumno puede ingresar al
+programa de ajustes razonables del instituto.
+Si el estudiante es aceptado en el programa, el DTP notifica por
+correo electrónico a los docentes que le impartirán clases, indicando
+los ajustes razonables sugeridos según su condición.
+Para formalizar el proceso, el DTP imprime el formulario con las
+respuestas de la entrevista y debe obtener las firmas de los distintos
+involucrados.
+Además, los estudiantes que forman parte del programa son
+monitoreados a lo largo del semestre. Este seguimiento incluye la
+revisión de evaluaciones, el desempeño en trabajos en equipo y otras
+actividades académicas, registrándose en una planilla denominada
+"Seguimiento". Durante el semestre, tanto el seguimiento como los
+ajustes razonables deben ser enviados regularmente a los docentes.
+Sin embargo, la información del alumno, el código de cada clase y
+los docentes asignados se encuentran distribuidos en distintos
+archivos de Excel, lo que dificulta y retrasa el proceso de inscripción
+en el programa y la oportuna comunicación con los profesores.
+Sistema de Gestión de Ajustes Razonables
+para el DTP de INACAP
+1. Resumen Ejecutivo
+Este documento describe la arquitectura del sistema propuesto para el Departamento Técnico
+Pedagógico (DTP) de INACAP, enfocado en la gestión de ajustes razonables para estudiantes
+con discapacidad o neurodiversidad. El sistema centralizará la información actualmente dispersa
+en diferentes archivos Excel, automatizará procesos, y facilitará la comunicación entre el DTP,
+estudiantes y docentes.
+2. Análisis del Problema
+2.1 Situación Actual
+• La información de los alumnos, códigos de clases y docentes asignados está distribuida
+en diferentes archivos Excel.
+• El proceso de inscripción en el programa de ajustes razonables y la comunicación con los
+profesores se ve dificultado por esta fragmentación.
+• Se manejan formularios en papel que requieren múltiples firmas.
+• El seguimiento se registra en planillas separadas que deben actualizarse manualmente.
+2.2 Desafíos Identificados
+• Dispersión de la información en múltiples archivos
+• Procesos manuales y duplicación de datos
+• Dificultad para dar seguimiento oportuno a los estudiantes
+• Retrasos en la comunicación con los docentes
+• Gestión manual de documentos físicos con firmas
+3. Descripción General del Sistema
+3.1 Objetivos
+• Centralizar toda la información relacionada con estudiantes con discapacidad/
+neurodiversidad
+• Automatizar el flujo de trabajo del programa de ajustes razonables
+• Facilitar la comunicación entre el DTP, estudiantes y docentes
+• Mejorar el seguimiento de los estudiantes durante el semestre
+• Generar reportes e indicadores para la toma de decisiones
+3.2 Alcance
+El sistema abarcará los siguientes procesos:
+1. Registro inicial de estudiantes (importación de la planilla FUD)
+2. Gestión de entrevistas iniciales
+3. Definición y aprobación de ajustes razonables
+4. Notificación automática a docentes
+5. Seguimiento semestral de estudiantes
+6. Evaluación de la efectividad de los ajustes
+7. Gestión de continuidad para el siguiente semestre
+8. Generación de reportes y estadísticas
+4. Arquitectura del Sistema
+4.1 Enfoque Arquitectónico
+Se propone una aplicación web moderna con arquitectura de tres capas:
+1. 2. 3. Capa de Presentación: Interfaz de usuario responsiva y accesible
+Capa de Lógica de Negocio: Servicios y controladores que implementan el flujo de
+trabajo
+Capa de Datos: Base de datos relacional para almacenamiento persistente
+4.2 Diagrama de Arquitectura
+4.3 Componentes Principales
+4.3.1 Base de Datos
+La base de datos incluirá las siguientes entidades principales:
+• Estudiantes: Información personal y académica
+• Discapacidades/Condiciones: Catálogo de tipos de discapacidad/neurodiversidad
+• Entrevistas: Registro de entrevistas y evaluaciones
+• AjustesRazonables: Catálogo de posibles ajustes y su aplicación
+• Asignaturas: Información de cursos y secciones
+• Docentes: Información de contacto y asignaturas asignadas
+• Seguimientos: Registros de seguimiento durante el semestre
+• Notificaciones: Histórico de comunicaciones enviadas
+4.3.2 Backend
+Desarrollado con un framework moderno como Spring Boot (Java), Django (Python) o Laravel
+(PHP), gestionará:
+• Lógica de negocio y flujos de trabajo
+• Autenticación y autorización
+• API REST para comunicación con el frontend
+• Integración con servicios externos (email, firma electrónica)
+• Importación/exportación de datos desde/hacia Excel
+4.3.3 Frontend
+Interfaz web responsiva desarrollada con React, Angular o Vue.js, con:
+• Dashboards personalizados por rol
+• Formularios electrónicos que replican los documentos existentes
+• Visualización de datos y reportes
+• Interfaz accesible según estándares WCAG 2.1
+• Notificaciones y alertas
+5. Módulos del Sistema
+5.1 Módulo de Gestión de Estudiantes
+• Importación de la planilla FUD
+• Registro y actualización de datos personales
+• Gestión de documentación asociada (certificados médicos, RND)
+• Historial académico del estudiante
+5.2 Módulo de Entrevistas
+• Agendamiento de entrevistas
+• Formulario digital para el registro de la primera entrevista
+• Notificaciones automáticas para recordatorios y reagendamientos
+• Firma digital del estudiante para consentimiento informado
+5.3 Módulo de Ajustes Razonables
+• Catálogo predefinido de tipos de ajustes
+• Asignación de ajustes por estudiante y asignatura
+• Flujo de aprobación con Director de Carrera
+• Generación automática del documento de propuesta de ajustes
+5.4 Módulo de Comunicaciones
+• Envío automático de notificaciones a docentes
+• Plantillas personalizables para correos electrónicos
+• Histórico de comunicaciones enviadas
+• Recordatorios periódicos a docentes durante el semestre
+5.5 Módulo de Seguimiento
+• Registro de seguimientos periódicos
+• Alertas de estudiantes sin seguimiento reciente
+• Evaluación de la efectividad de los ajustes
+• Gestión de la continuidad para el siguiente semestre
+5.6 Módulo de Reportes
+• Dashboard con indicadores clave
+• Reportes estadísticos por tipo de discapacidad, carrera, etc.
+• Exportación de datos a Excel
+• Gráficos comparativos de rendimiento académico
+6. Flujo de Trabajo del Sistema
+6.1 Registro Inicial
+1. 2. 3. Importación de planilla FUD al inicio del semestre
+Identificación de estudiantes nuevos y de continuidad
+Asignación automática a encargados de DTP para entrevistas
+6.2 Primera Entrevista
+1. Agendamiento de entrevista
+3. 4. 2. Recordatorio automático al estudiante
+Registro de la entrevista en el sistema
+Firma digital del consentimiento informado
+6.3 Definición de Ajustes Razonables
+1. 2. 3. 4. Registro de ajustes sugeridos por asignatura
+Flujo de aprobación (DTP > Director de Carrera)
+Notificación automática a docentes con ajustes aprobados
+Generación del documento de propuesta firmado digitalmente
+6.4 Seguimiento Semestral
+1. Programación de seguimientos periódicos
+2. 3. 4. Registro de evaluaciones y desempeño
+Actualización de ajustes si es necesario
+Notificación de cambios a docentes
+6.5 Cierre y Continuidad
+1. Evaluación final del semestre
+2. 3. Determinación de continuidad para el siguiente periodo
+Preparación automática del expediente para el siguiente semestre
+7. Integración con Sistemas Existentes
+El sistema deberá integrarse o interoperar con:
+• Sistema académico de INACAP (para datos de cursos, docentes y estudiantes)
+• Plataforma de correo electrónico institucional
+• Sistema de firma electrónica (si existe)
+8. Consideraciones de Seguridad y Privacidad
+• Acceso basado en roles con diferentes niveles de permisos
+• Cifrado de datos sensibles en la base de datos
+• Registro de auditoría para cambios críticos
+• Cumplimiento con normativas de protección de datos personales
+• Backups automáticos y plan de recuperación de desastres
+9. Tecnologías Recomendadas
+9.1 Backend
+• Lenguaje: Java, Python o PHP
+• Framework: Spring Boot, Django, Flask o Laravel
+• Base de Datos: PostgreSQL o MySQL
+• API: REST con autenticación JWT
+9.2 Frontend
+• Framework: React o Angular
+• UI Components: Material-UI o Bootstrap
+• Gráficos: Chart.js o D3.js
+• PDF Generation: PDFKit o similar
+9.3 Infraestructura
+• Hosting: Nube (AWS, Azure, GCP) o On-Premise según política institucional
+• CI/CD: Jenkins o GitHub Actions
+• Contenedores: Docker para desarrollo y despliegue
+10. Plan de Implementación
+Se recomienda un enfoque iterativo con las siguientes fases:
+Fase 1: Base del Sistema
+• Desarrollo de la base de datos
+• Módulo de gestión de estudiantes
+• Importación de datos existentes
+Fase 2: Flujo Principal
+• Módulo de entrevistas
+• Módulo de ajustes razonables
+• Notificaciones básicas
+Fase 3: Funcionalidades Avanzadas
+• Módulo de seguimiento
+• Reportes y dashboards
+• Firma digital
+Fase 4: Optimización y Escalado
+• Mejoras de usabilidad según feedback
+• Optimización de rendimiento
+• Ampliación de integraciones
+11. Conclusiones y Recomendaciones
+El sistema propuesto permitirá al DTP de INACAP centralizar la información y automatizar sus
+procesos, mejorando significativamente la gestión de los ajustes razonables para estudiantes con
+discapacidad o neurodiversidad. Esto resultará en una atención más oportuna, un seguimiento
+más efectivo y una mejor comunicación con todos los involucrados.
+Se recomienda:
+1. 2. 3. 4. 5. Realizar un mapeo detallado de los procesos actuales con todos los stakeholders
+Definir claramente los roles y responsabilidades en el nuevo sistema
+Planificar una capacitación completa para todos los usuarios
+Considerar un periodo de transición donde ambos sistemas (actual y nuevo) funcionen en
+paralelo
+Establecer métricas para evaluar el impacto del nuevo sistema
+Este documento de arquitectura sirve como base para el desarrollo del sistema y debe revisarse y
+actualizarse durante el ciclo de vida del proyecto.

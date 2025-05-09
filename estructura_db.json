@@ -1,0 +1,1002 @@
+[
+    {
+      "table_name": "ajuste_asignado",
+      "column_name": "id_ajuste_asignado",
+      "data_type": "integer",
+      "is_nullable": "NO",
+      "column_default": "nextval('ajuste_asignado_id_ajuste_asignado_seq'::regclass)",
+      "constraint_type": "PRIMARY KEY",
+      "referenced_table": "ajuste_asignado",
+      "referenced_column": "id_ajuste_asignado"
+    },
+    {
+      "table_name": "ajuste_asignado",
+      "column_name": "fecha_asignacion",
+      "data_type": "date",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "ajuste_asignado",
+      "column_name": "fecha_aprobacion",
+      "data_type": "date",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "ajuste_asignado",
+      "column_name": "estado",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "ajuste_asignado",
+      "column_name": "observaciones",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "ajuste_asignado",
+      "column_name": "id_estudiante",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": "FOREIGN KEY",
+      "referenced_table": "estudiante",
+      "referenced_column": "id_estudiante"
+    },
+    {
+      "table_name": "ajuste_asignado",
+      "column_name": "id_seccion",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": "FOREIGN KEY",
+      "referenced_table": "seccion",
+      "referenced_column": "id_seccion"
+    },
+    {
+      "table_name": "ajuste_asignado",
+      "column_name": "id_ajuste_catalogo",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": "FOREIGN KEY",
+      "referenced_table": "ajuste_razonable_catalogo",
+      "referenced_column": "id_ajuste_catalogo"
+    },
+    {
+      "table_name": "ajuste_asignado",
+      "column_name": "id_entrevista",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": "FOREIGN KEY",
+      "referenced_table": "entrevista",
+      "referenced_column": "id_entrevista"
+    },
+    {
+      "table_name": "ajuste_asignado",
+      "column_name": "id_aprobador",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": "FOREIGN KEY",
+      "referenced_table": "personal_dtp",
+      "referenced_column": "id_personal"
+    },
+    {
+      "table_name": "ajuste_razonable_catalogo",
+      "column_name": "id_ajuste_catalogo",
+      "data_type": "integer",
+      "is_nullable": "NO",
+      "column_default": "nextval('ajuste_razonable_catalogo_id_ajuste_catalogo_seq'::regclass)",
+      "constraint_type": "PRIMARY KEY",
+      "referenced_table": "ajuste_razonable_catalogo",
+      "referenced_column": "id_ajuste_catalogo"
+    },
+    {
+      "table_name": "ajuste_razonable_catalogo",
+      "column_name": "nombre",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "ajuste_razonable_catalogo",
+      "column_name": "descripcion",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "ajuste_razonable_catalogo",
+      "column_name": "categoria",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "ajuste_razonable_catalogo",
+      "column_name": "activo",
+      "data_type": "boolean",
+      "is_nullable": "YES",
+      "column_default": "true",
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "asignatura",
+      "column_name": "id_asignatura",
+      "data_type": "integer",
+      "is_nullable": "NO",
+      "column_default": "nextval('asignatura_id_asignatura_seq'::regclass)",
+      "constraint_type": "PRIMARY KEY",
+      "referenced_table": "asignatura",
+      "referenced_column": "id_asignatura"
+    },
+    {
+      "table_name": "asignatura",
+      "column_name": "codigo",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "asignatura",
+      "column_name": "nombre",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "asignatura",
+      "column_name": "carrera",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "asignatura",
+      "column_name": "semestre",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "asignatura",
+      "column_name": "id_carrera",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": "FOREIGN KEY",
+      "referenced_table": "programa_estudio",
+      "referenced_column": "id_carrera"
+    },
+    {
+      "table_name": "discapacidad_condicion",
+      "column_name": "id_discapacidad",
+      "data_type": "integer",
+      "is_nullable": "NO",
+      "column_default": "nextval('discapacidad_condicion_id_discapacidad_seq'::regclass)",
+      "constraint_type": "PRIMARY KEY",
+      "referenced_table": "discapacidad_condicion",
+      "referenced_column": "id_discapacidad"
+    },
+    {
+      "table_name": "discapacidad_condicion",
+      "column_name": "nombre",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "discapacidad_condicion",
+      "column_name": "descripcion",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "discapacidad_condicion",
+      "column_name": "id_tipo_disc",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": "FOREIGN KEY",
+      "referenced_table": "tipo_disc",
+      "referenced_column": "id_tipo_disc"
+    },
+    {
+      "table_name": "docente",
+      "column_name": "id_docente",
+      "data_type": "integer",
+      "is_nullable": "NO",
+      "column_default": "nextval('docente_id_docente_seq'::regclass)",
+      "constraint_type": "PRIMARY KEY",
+      "referenced_table": "docente",
+      "referenced_column": "id_docente"
+    },
+    {
+      "table_name": "docente",
+      "column_name": "rut",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": "UNIQUE",
+      "referenced_table": "docente",
+      "referenced_column": "rut"
+    },
+    {
+      "table_name": "docente",
+      "column_name": "nombres",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "docente",
+      "column_name": "apellidos",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "docente",
+      "column_name": "email",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "docente",
+      "column_name": "telefono",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "docente",
+      "column_name": "activo",
+      "data_type": "boolean",
+      "is_nullable": "YES",
+      "column_default": "true",
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "entrevista",
+      "column_name": "id_entrevista",
+      "data_type": "integer",
+      "is_nullable": "NO",
+      "column_default": "nextval('entrevista_id_entrevista_seq'::regclass)",
+      "constraint_type": "PRIMARY KEY",
+      "referenced_table": "entrevista",
+      "referenced_column": "id_entrevista"
+    },
+    {
+      "table_name": "entrevista",
+      "column_name": "fecha_programada",
+      "data_type": "date",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "entrevista",
+      "column_name": "fecha_realizada",
+      "data_type": "date",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "entrevista",
+      "column_name": "modalidad",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "entrevista",
+      "column_name": "estado",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "entrevista",
+      "column_name": "observaciones",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "entrevista",
+      "column_name": "consentimiento_firmado",
+      "data_type": "boolean",
+      "is_nullable": "YES",
+      "column_default": "false",
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "entrevista",
+      "column_name": "documento_firmado_url",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "entrevista",
+      "column_name": "id_estudiante",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": "FOREIGN KEY",
+      "referenced_table": "estudiante",
+      "referenced_column": "id_estudiante"
+    },
+    {
+      "table_name": "entrevista",
+      "column_name": "id_entrevistador",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": "FOREIGN KEY",
+      "referenced_table": "personal_dtp",
+      "referenced_column": "id_personal"
+    },
+    {
+      "table_name": "estudiante",
+      "column_name": "id_estudiante",
+      "data_type": "integer",
+      "is_nullable": "NO",
+      "column_default": "nextval('estudiante_id_estudiante_seq'::regclass)",
+      "constraint_type": "PRIMARY KEY",
+      "referenced_table": "estudiante",
+      "referenced_column": "id_estudiante"
+    },
+    {
+      "table_name": "estudiante",
+      "column_name": "rut",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": "UNIQUE",
+      "referenced_table": "estudiante",
+      "referenced_column": "rut"
+    },
+    {
+      "table_name": "estudiante",
+      "column_name": "nombres",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "estudiante",
+      "column_name": "apellido_paterno",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "estudiante",
+      "column_name": "apellido_materno",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "estudiante",
+      "column_name": "fecha_nacimiento",
+      "data_type": "date",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "estudiante",
+      "column_name": "genero",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "estudiante",
+      "column_name": "email",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "estudiante",
+      "column_name": "telefono",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "estudiante",
+      "column_name": "direccion",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "estudiante",
+      "column_name": "semestre_actual",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "estudiante",
+      "column_name": "fecha_ingreso_programa",
+      "data_type": "date",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "estudiante",
+      "column_name": "activo",
+      "data_type": "boolean",
+      "is_nullable": "YES",
+      "column_default": "true",
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "estudiante",
+      "column_name": "id_carrera",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": "FOREIGN KEY",
+      "referenced_table": "programa_estudio",
+      "referenced_column": "id_carrera"
+    },
+    {
+      "table_name": "estudiante_discapacidad",
+      "column_name": "id_estudiante_discapacidad",
+      "data_type": "integer",
+      "is_nullable": "NO",
+      "column_default": "nextval('estudiante_discapacidad_id_estudiante_discapacidad_seq'::regclass)",
+      "constraint_type": "PRIMARY KEY",
+      "referenced_table": "estudiante_discapacidad",
+      "referenced_column": "id_estudiante_discapacidad"
+    },
+    {
+      "table_name": "estudiante_discapacidad",
+      "column_name": "fecha_diagnostico",
+      "data_type": "date",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "estudiante_discapacidad",
+      "column_name": "certificado_url",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "estudiante_discapacidad",
+      "column_name": "observaciones",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "estudiante_discapacidad",
+      "column_name": "id_estudiante",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": "FOREIGN KEY",
+      "referenced_table": "estudiante",
+      "referenced_column": "id_estudiante"
+    },
+    {
+      "table_name": "estudiante_discapacidad",
+      "column_name": "id_discapacidad",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": "FOREIGN KEY",
+      "referenced_table": "discapacidad_condicion",
+      "referenced_column": "id_discapacidad"
+    },
+    {
+      "table_name": "notificacion",
+      "column_name": "id_notificacion",
+      "data_type": "integer",
+      "is_nullable": "NO",
+      "column_default": "nextval('notificacion_id_notificacion_seq'::regclass)",
+      "constraint_type": "PRIMARY KEY",
+      "referenced_table": "notificacion",
+      "referenced_column": "id_notificacion"
+    },
+    {
+      "table_name": "notificacion",
+      "column_name": "fecha_envio",
+      "data_type": "date",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "notificacion",
+      "column_name": "tipo_notificacion",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "notificacion",
+      "column_name": "contenido",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "notificacion",
+      "column_name": "estado",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "notificacion",
+      "column_name": "id_ajuste_asignado",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": "FOREIGN KEY",
+      "referenced_table": "ajuste_asignado",
+      "referenced_column": "id_ajuste_asignado"
+    },
+    {
+      "table_name": "notificacion",
+      "column_name": "id_docente",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": "FOREIGN KEY",
+      "referenced_table": "docente",
+      "referenced_column": "id_docente"
+    },
+    {
+      "table_name": "periodo_academico",
+      "column_name": "id_periodo",
+      "data_type": "integer",
+      "is_nullable": "NO",
+      "column_default": "nextval('periodo_academico_id_periodo_seq'::regclass)",
+      "constraint_type": "PRIMARY KEY",
+      "referenced_table": "periodo_academico",
+      "referenced_column": "id_periodo"
+    },
+    {
+      "table_name": "periodo_academico",
+      "column_name": "ano",
+      "data_type": "integer",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "periodo_academico",
+      "column_name": "semestre",
+      "data_type": "integer",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "periodo_academico",
+      "column_name": "fecha_inicio",
+      "data_type": "date",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "periodo_academico",
+      "column_name": "fecha_fin",
+      "data_type": "date",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "periodo_academico",
+      "column_name": "activo",
+      "data_type": "boolean",
+      "is_nullable": "YES",
+      "column_default": "true",
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "personal_dtp",
+      "column_name": "id_personal",
+      "data_type": "integer",
+      "is_nullable": "NO",
+      "column_default": "nextval('personal_dtp_id_personal_seq'::regclass)",
+      "constraint_type": "PRIMARY KEY",
+      "referenced_table": "personal_dtp",
+      "referenced_column": "id_personal"
+    },
+    {
+      "table_name": "personal_dtp",
+      "column_name": "rut",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": "UNIQUE",
+      "referenced_table": "personal_dtp",
+      "referenced_column": "rut"
+    },
+    {
+      "table_name": "personal_dtp",
+      "column_name": "nombres",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "personal_dtp",
+      "column_name": "apellidos",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "personal_dtp",
+      "column_name": "email",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "personal_dtp",
+      "column_name": "cargo",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "personal_dtp",
+      "column_name": "activo",
+      "data_type": "boolean",
+      "is_nullable": "YES",
+      "column_default": "true",
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "programa_estudio",
+      "column_name": "id_carrera",
+      "data_type": "integer",
+      "is_nullable": "NO",
+      "column_default": "nextval('programa_estudio_id_carrera_seq'::regclass)",
+      "constraint_type": "PRIMARY KEY",
+      "referenced_table": "programa_estudio",
+      "referenced_column": "id_carrera"
+    },
+    {
+      "table_name": "programa_estudio",
+      "column_name": "cod_carrera",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "programa_estudio",
+      "column_name": "nombre_carrera",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "programa_estudio",
+      "column_name": "director",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "programa_estudio",
+      "column_name": "id_sede",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": "FOREIGN KEY",
+      "referenced_table": "sede",
+      "referenced_column": "id_sede"
+    },
+    {
+      "table_name": "seccion",
+      "column_name": "id_seccion",
+      "data_type": "integer",
+      "is_nullable": "NO",
+      "column_default": "nextval('seccion_id_seccion_seq'::regclass)",
+      "constraint_type": "PRIMARY KEY",
+      "referenced_table": "seccion",
+      "referenced_column": "id_seccion"
+    },
+    {
+      "table_name": "seccion",
+      "column_name": "codigo_seccion",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "seccion",
+      "column_name": "id_asignatura",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": "FOREIGN KEY",
+      "referenced_table": "asignatura",
+      "referenced_column": "id_asignatura"
+    },
+    {
+      "table_name": "seccion",
+      "column_name": "id_periodo",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": "FOREIGN KEY",
+      "referenced_table": "periodo_academico",
+      "referenced_column": "id_periodo"
+    },
+    {
+      "table_name": "seccion",
+      "column_name": "id_docente",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": "FOREIGN KEY",
+      "referenced_table": "docente",
+      "referenced_column": "id_docente"
+    },
+    {
+      "table_name": "sede",
+      "column_name": "id_sede",
+      "data_type": "integer",
+      "is_nullable": "NO",
+      "column_default": "nextval('sede_id_sede_seq'::regclass)",
+      "constraint_type": "PRIMARY KEY",
+      "referenced_table": "sede",
+      "referenced_column": "id_sede"
+    },
+    {
+      "table_name": "sede",
+      "column_name": "nombre_sede",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "sede",
+      "column_name": "ciudad",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "seguimiento",
+      "column_name": "id_seguimiento",
+      "data_type": "integer",
+      "is_nullable": "NO",
+      "column_default": "nextval('seguimiento_id_seguimiento_seq'::regclass)",
+      "constraint_type": "PRIMARY KEY",
+      "referenced_table": "seguimiento",
+      "referenced_column": "id_seguimiento"
+    },
+    {
+      "table_name": "seguimiento",
+      "column_name": "fecha_seguimiento",
+      "data_type": "date",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "seguimiento",
+      "column_name": "tipo_seguimiento",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "seguimiento",
+      "column_name": "comentarios",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    },
+    {
+      "table_name": "seguimiento",
+      "column_name": "estado_academico",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null,
+      "constraint_type": null,
+      "referenced_table": null,
+      "referenced_column": null
+    }
+  ]
