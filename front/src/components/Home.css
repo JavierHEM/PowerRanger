@@ -1,0 +1,41 @@
+.home-bg {
+  animation: gradientBG 8s ease-in-out infinite;
+  background: linear-gradient(120deg, #b71c1c 0%, #ff5252 100%);
+  background-size: 200% 200%;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.inacap-shadow {
+  box-shadow: 0 8px 32px 0 rgba(183, 28, 28, 0.25);
+}
+
+.inacap-title {
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+  letter-spacing: 2px;
+  color: #b71c1c;
+}
+
+.inacap-subtitle {
+  color: #333;
+  font-weight: 500;
+}
+
+.inacap-btn {
+  background: linear-gradient(90deg, #b71c1c 0%, #ff5252 100%);
+  color: #fff !important;
+  font-weight: 700;
+  border-radius: 30px;
+  padding: 12px 40px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 20px 0 rgba(183, 28, 28, 0.15);
+  transition: 0.3s;
+}
+.inacap-btn:hover {
+  background: linear-gradient(90deg, #ff5252 0%, #b71c1c 100%);
+  transform: scale(1.05);
+}
